@@ -17,7 +17,7 @@ public class EndlessScroll : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.velocity = gameVelocity * scrollFactor;
     }
-
+     
     // Update is called once per frame
     void Update()
     {
@@ -26,12 +26,19 @@ public class EndlessScroll : MonoBehaviour
 
     private void OnTriggerExit(Collider gameArea)
     {
-        transform.position += Vector3.right * (gameArea.bounds.size.x + GetComponent<BoxCollider>().size.x);
+        if (gameArea.gameObject.tag.Equals("GameArea"))
+        {
+            transform.position += Vector3.right * (gameArea.bounds.size.x + GetComponent<BoxCollider>().size.x);
+        }        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        
     }
 }
 

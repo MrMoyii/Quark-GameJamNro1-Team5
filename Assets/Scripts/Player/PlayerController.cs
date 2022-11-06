@@ -6,18 +6,19 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Vector3 gravity;
     [SerializeField] private Vector3 jumpSpeed;
-
     [SerializeField] private GameObject jumpSound;    
 
     private bool isGrounded = false;
     private Rigidbody rb;
     private GameObject newSound;
+    private Animator animator;
 
 
     private void Awake()
     {
         Physics.gravity = gravity;
-        rb = GetComponent<Rigidbody>();      
+        rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,8 +28,13 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = jumpSpeed;
             isGrounded = false;
+            animator.SetBool("isJumping", true);
             newSound = Instantiate(jumpSound);
             Destroy(newSound, 2);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 
