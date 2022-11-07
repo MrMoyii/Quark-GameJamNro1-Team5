@@ -13,12 +13,11 @@ public class PlayerController : MonoBehaviour
     private GameObject newSound;
     private Animator animator;
 
-
     private void Awake()
     {
         Physics.gravity = gravity;
         rb = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();       
     }
 
     // Update is called once per frame
