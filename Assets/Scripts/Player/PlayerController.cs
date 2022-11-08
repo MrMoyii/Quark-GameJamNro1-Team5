@@ -13,14 +13,14 @@ public class PlayerController : MonoBehaviour
     private GameObject newSound;
     private Animator animator;
 
-    private void Awake()
+    private void Awake() 
     {
         Physics.gravity = gravity;
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();       
     }
-
-    // Update is called once per frame
+    
+    // -- Se hace presenter de la clase que da movimiento al personaje para que el playercontroller instancie y use sus métodos
     void Update()
     {
         if (Input.anyKeyDown && isGrounded)
