@@ -156,8 +156,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1892658774685878216, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
         type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892658774685878216, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
+        type: 3}
       propertyPath: m_Shadows.m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892658774685878216, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1892658775154832104, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
         type: 3}
@@ -221,13 +231,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1892658775361574992, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
         type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892658775361574992, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892658775361574992, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
+        type: 3}
       propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892658775361574992, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892658775595726867, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
+        type: 3}
+      propertyPath: m_Intensity
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1892658775595726867, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
         type: 3}
       propertyPath: m_Shadows.m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892658775595726867, guid: 9fd9ee552acc16e4f89c9e0edf89915f,
+        type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fd9ee552acc16e4f89c9e0edf89915f, type: 3}
