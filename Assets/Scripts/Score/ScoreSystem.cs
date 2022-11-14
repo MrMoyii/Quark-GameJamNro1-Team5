@@ -25,7 +25,7 @@ public class ScoreSystem : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             score = score + 1;
-            scoreText.text = "Score: " + score;
+            scoreText.text = "Score: " + score + " points";
         }
     }
 }

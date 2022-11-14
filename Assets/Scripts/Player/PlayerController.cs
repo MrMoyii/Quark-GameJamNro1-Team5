@@ -12,8 +12,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private GameObject newSound;
     private Animator animator;
+    private bool jump;
 
-    private void Awake() 
+    private void Awake()
     {
         Physics.gravity = gravity;
         rb = GetComponent<Rigidbody>();
@@ -23,9 +24,9 @@ public class PlayerController : MonoBehaviour
     // -- Se hace presenter de la clase que da movimiento al personaje para que el playercontroller instancie y use sus métodos
     void Update()
     {
-        if (Input.anyKeyDown && isGrounded)
+        if (jump && isGrounded)
         {
-            rb.velocity = jumpSpeed;
+            rb.velocity = jumpSpeed; 
             isGrounded = false;
             animator.SetBool("isJumping", true);
             newSound = Instantiate(jumpSound);
@@ -39,6 +40,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        isGrounded = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }        
     }
+
+    public void Jump()
+    {
+        jump = true;
+    }
+
+
+
 }
