@@ -21,7 +21,6 @@ public class PlayerView : MonoBehaviour, IPlayerView
     private float targetPositionRight, targetPositionLeft, targetPositionCenter;
     private Vector3 vectorPosition;
 
-
     IPlayerPresenter presenter;
 
     private void Awake()
@@ -74,9 +73,7 @@ public class PlayerView : MonoBehaviour, IPlayerView
         if (desireLine == 0)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, targetPositionCenter);            
-        }
-
-        Debug.Log(desireLine);
+        }        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -110,8 +107,8 @@ public class PlayerView : MonoBehaviour, IPlayerView
         {
             desireLine++;
             left = true;
-        }        
-    } 
+        }    
+    }
 
     public void Right()
     {        
